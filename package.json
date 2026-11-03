@@ -1,0 +1,23 @@
+{
+  "name": "spendpreflight-examples",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "example:buyer": "node 01-guarded-client/demo.mjs",
+    "example:mcp": "node 02-mcp-assistant/run.mjs",
+    "example:seller": "node 03-seller-ci/run.mjs"
+  },
+  "dependencies": {
+    "spendpreflight": "0.3.2",
+    "@x402/core": "2.28.0",
+    "@x402/fetch": "2.28.0",
+    "@x402/evm": "2.28.0",
+    "viem": "2.57.3",
+    "yaml": "2.8.1"
+  }
+}

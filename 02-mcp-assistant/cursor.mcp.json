@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "spendpreflight": {
+      "url": "https://api.spendpreflight.com/mcp"
+    }
+  }
+}

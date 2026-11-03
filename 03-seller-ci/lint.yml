@@ -1,0 +1,19 @@
+name: Seller x402 Lint
+on:
+  workflow_dispatch:
+    inputs:
+      endpoint:
+        description: Your public HTTPS x402 endpoint (no secrets or private URLs)
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: spendpreflight/x402-lint-action@8a74ce8023ee24708f0b11525f48eafa0c953c6e
+        with:
+          urls: ${{ inputs.endpoint }}
+          comment: 'false'
+          fail-on-inconclusive: 'true'
